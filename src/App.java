@@ -17,7 +17,7 @@ public class App {
         Maze maze = new Maze(laberinto);
         System.out.println("Laberinto");
         maze.printMaze();
-        Cells start = new Cells(0,0);
+        Cells start = new Cells(0,3);
         Cells end = new Cells(3,3);
 
         List<MazeSolver> soluciones = Arrays.asList(
