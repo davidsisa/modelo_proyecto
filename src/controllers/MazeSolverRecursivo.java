@@ -18,11 +18,27 @@ public class MazeSolverRecursivo implements MazeSolver{
                     return path;
                 }
                 return new ArrayList<>();
-            }
+        }
         
     private boolean findPath(boolean[][] grid, int row, int col, Cells end, List<Cells> path) {
+        if (row>= grid.length || col >= grid[0].length || !grid[row][col]) {
+            return false;
+        }
+        Cells cell = new Cells (row,col);
+        if (row == end.row && col == end.col) {
+            path.add(cell);
+            return true;
+        }
+        if(findPath(grid,row+1,col,end,path)){
+            path.add(cell);
+            return true;
+        }
+        if(findPath(grid,row,col+1,end,path)){
+            path.add(cell);
+            return true;
+        }
         
-    
+        return false;
     }
     
 }

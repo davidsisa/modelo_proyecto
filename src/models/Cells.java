@@ -10,7 +10,7 @@ public class Cells {
 
     @Override
     public String toString() {
-        return "Cells [row=" + row + ", col=" + col + "]";
+        return  "(" + row  +"," + col + ")" ;
     }
     
 }
